@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.thunderpunch.stretchview.MainActivity">
+
+        <com.thunderpunch.stretchview.view.StretchView
+            android:id="@+id/sv"
+            style="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stretchFactor="0.4"
+            android:background="@color/colorPrimary"
+            app:direction="bottom">
+
+            <!-- StretchView can host only one direct child -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/fl0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="click"
+                    android:paddingBottom="@dimen/vertical_padding"
+                    android:paddingTop="@dimen/vertical_padding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/bottom_icon_bottom_margin"
+                        app:srcCompat="@drawable/ic_stats_dots" />
+
+                    <TextView
+                        style="@style/bottom_text"
+                        android:text="Text" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="click"
+                    android:paddingBottom="@dimen/vertical_padding"
+                    android:paddingTop="@dimen/vertical_padding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/bottom_icon_bottom_margin"
+                        app:srcCompat="@drawable/ic_tv" />
+
+                    <TextView
+                        style="@style/bottom_text"
+                        android:text="Text" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="click"
+                    android:paddingBottom="@dimen/vertical_padding"
+                    android:paddingTop="@dimen/vertical_padding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/bottom_icon_bottom_margin"
+                        app:srcCompat="@drawable/ic_cog" />
+
+                    <TextView
+                        style="@style/bottom_text"
+                        android:text="Text" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="click"
+                    android:paddingBottom="@dimen/vertical_padding"
+                    android:paddingTop="@dimen/vertical_padding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/bottom_icon_bottom_margin"
+                        app:srcCompat="@drawable/ic_user" />
+
+                    <TextView
+                        style="@style/bottom_text"
+                        android:text="Text" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </com.thunderpunch.stretchview.view.StretchView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dedede"
+            app:layout_behavior="com.thunderpunch.stretchview.view.TranslationBehavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

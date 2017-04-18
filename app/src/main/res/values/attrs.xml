@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StretchView">
+        <attr name="stretchFactor" format="float" />
+        <attr name="direction">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
