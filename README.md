@@ -52,7 +52,7 @@ the effect is shown as below
    sv.setOnStretchListener(new StretchView.OnStretchListener() {
        @Override
        public void onTranslation(int trans) {
-           if (sv.getDirection() == StretchView.BOTTOM || sv.getDirection() == 						StretchView.RIGHT) {
+           if (sv.getDirection() == StretchView.BOTTOM || sv.getDirection() == StretchView.RIGHT) {
                trans = -trans;
            }
            if (trans > 0) {
