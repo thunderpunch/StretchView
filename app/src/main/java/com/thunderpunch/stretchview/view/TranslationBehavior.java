@@ -8,7 +8,7 @@ import android.view.View;
 import com.thunderpunch.stretchview.view.StretchView;
 
 /**
- * Created by FEN ZENG on 2017/3/20
+ * Created by thunderpunch on 2017/3/20
  * Description:
  */
 

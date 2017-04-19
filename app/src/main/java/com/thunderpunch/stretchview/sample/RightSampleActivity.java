@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.thunderpunch.stretchview.R;
-import com.thunderpunch.stretchview.view.StretchBehavior;
 import com.thunderpunch.stretchview.view.StretchView;
 
 /**
@@ -57,7 +56,7 @@ public class RightSampleActivity extends AppCompatActivity {
     public void click(View v) {
         if (v.getId() == R.id.exit) {
             //获取behavior,并折叠
-            final StretchBehavior b = (StretchBehavior) ((CoordinatorLayout.LayoutParams) sv.getLayoutParams()).getBehavior();
+            final StretchView.StretchBehavior b = (StretchView.StretchBehavior) ((CoordinatorLayout.LayoutParams) sv.getLayoutParams()).getBehavior();
             b.setIsShow(sv, false);
         }
     }
